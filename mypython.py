@@ -13,6 +13,12 @@ def check_response(config):
     headers = {"Authorization": f"Bearer {bearer_token}"}
     response = requests.post(url, headers=headers)
     data = response.json()
+    if 'error' in data:
+        print()
+        print(f"Configuration: {config['name']} - The 'error' field exists.")
+        print()
+        return
+
     point = data["data"]["point"]
     message = data["data"]["message"]
     print(message)
