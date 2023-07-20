@@ -1,0 +1,12 @@
+[
+  {
+    "name": "192.168.176.76",
+    "baseUrlMs": "http://192.168.176.76:8080/msService",
+    "bearerToken": "cc5980b2-ea87-479c-8816-9dc976e8d31a"
+  },
+  {
+    "name": "10.54.4.21",
+    "baseUrlMs": "http://10.54.4.21:8080/msService",
+    "bearerToken": "03696298-ab30-4ac5-b3f2-bdf4bfae792a"
+  }
+]
