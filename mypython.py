@@ -73,6 +73,8 @@ def read_configurations():
     with open(config_file) as file:
         configurations = json.load(file)
     for config in configurations:
+        if config['valid'] == False:
+            continue
         baseUrl = config['baseUrl']
         baseUrlMs = config['baseUrlMs']
         # 替换为正常请求的地址
@@ -86,13 +88,18 @@ configurations = read_configurations()
 my_token_map = {}
 
 for config in configurations:
+    if config['valid'] == False:
+        continue
     baseUrl = config['baseUrl']
     username = config['username']
     password = config['password']
+    print(f"获取该配置项的ticket:{config['name']}：")
     config["ticket"] = get_ticket(baseUrl, username, password)
 
 while True:
     for config in configurations:
+        if config['valid'] == False:
+            continue
         name = config['name']
         baseUrlMs = config['baseUrlMs']
         ticket = config["ticket"]

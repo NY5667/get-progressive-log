@@ -4,13 +4,15 @@
 	"baseUrl": "http://192.168.176.76:8080",
     "baseUrlMs": "{{baseUrl}}/msService",
 	"username": "admin",
-	"password": "Supcon@1304"
+	"password": "Supcon@1304",
+	"valid": false
   },
   {
     "name": "10.54.4.21",
 	"baseUrl": "http://10.54.4.21:8080",
     "baseUrlMs": "{{baseUrl}}/msService",
 	"username":"ldy",
-	"password":"Supcon@1304"
+	"password":"Supcon@1304",
+	"valid": true
   }
 ]
