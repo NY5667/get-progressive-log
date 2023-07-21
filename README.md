@@ -37,3 +37,9 @@ pip install -r requirements.txt
 ```
 python mypython.py
 ```
+
+运行快速启动脚本
+
+```
+run.bat
+```
