@@ -1,12 +1,16 @@
 [
   {
     "name": "192.168.176.76",
-    "baseUrlMs": "http://192.168.176.76:8080/msService",
-    "bearerToken": "f9978f76-6428-4159-b18c-64cd8352b042"
+	"baseUrl": "http://192.168.176.76:8080",
+    "baseUrlMs": "{{baseUrl}}/msService",
+	"username": "admin",
+	"password": "Supcon@1304"
   },
   {
     "name": "10.54.4.21",
-    "baseUrlMs": "http://10.54.4.21:8080/msService",
-    "bearerToken": "e5ae37ea-e587-4a3b-8e06-4c81d0e8e6f9"
+	"baseUrl": "http://10.54.4.21:8080",
+    "baseUrlMs": "{{baseUrl}}/msService",
+	"username":"ldy",
+	"password":"Supcon@1304"
   }
 ]
