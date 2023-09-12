@@ -54,6 +54,8 @@ def init_token():
             print()
             return
         config["token"] = token_data.get("ticket")
+        print('token:')
+        print(config["token"])
         
 
 def run_task():
@@ -116,20 +118,16 @@ def get_online_users_and_delete(base_url, token):
     返回:
     
     """
-    get_online_users(base_url, token)
+    data = get_online_users(base_url, token)
     print('获取实时在线用户')
     print(data)
 
-    if response.status_code == 200:
-        online_id_array = []
-        for item in data["list"]:
-            print("id:", item["id"])
-            online_id_array.append(item["id"])
-        online_id_str = ",".join(str(element) for element in online_id_array)
-        delete_user_by_ids(base_url, token, online_id_str)
-        
-    else:
-        print("Error:", response.status_code)
+    online_id_array = []
+    for item in data["list"]:
+        print("id:", item["id"])
+        online_id_array.append(item["id"])
+    online_id_str = ",".join(str(element) for element in online_id_array)
+    delete_user_by_ids(base_url, token, online_id_str)
 
 configurations = read_configurations()
 
