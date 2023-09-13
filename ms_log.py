@@ -14,9 +14,9 @@ def run_task():
     while True:
         for config in configurations:
             name = config['name']
-            baseUrlMs = config['baseUrlMs']
+            base_url_ms = config['base_url_ms']
             token = config["token"]
-            progressive_log = get_pregressive_log(name, baseUrlMs, token)
+            progressive_log = get_pregressive_log(name, base_url_ms, token)
             
             # 处理报错返回结果
             if 'error' in progressive_log:

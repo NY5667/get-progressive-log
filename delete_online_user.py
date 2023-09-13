@@ -11,9 +11,9 @@ def exit_user():
     string: 配置文件数组。
     """
     for config in configurations:
-        baseUrl = config['baseUrl']
+        base_url = config['base_url']
         token = config["token"]
-        get_online_users_and_delete(baseUrl, token)
+        get_online_users_and_delete(base_url, token)
 
 
 def get_online_users_and_delete(base_url, token):

@@ -10,17 +10,17 @@ def read_configurations():
     返回:
     string: 配置文件数组。
     """
-    config_file = "configurations.json"
+    config_file = "./configurations.json"
     with open(config_file) as file:
         configurations = json.load(file)
     for config in configurations:
         if config['valid'] == False:
             continue
-        baseUrl = config['baseUrl']
-        baseUrlMs = config['baseUrlMs']
+        base_url = config['base_url']
+        base_url_ms = config['base_url_ms']
         # 替换为正常请求的地址
-        baseUrlMs = baseUrlMs.replace("{{baseUrl}}", baseUrl)
-        config['baseUrlMs'] = baseUrlMs
+        base_url_ms = base_url_ms.replace("{{base_url}}", base_url)
+        config['base_url_ms'] = base_url_ms
     return [config for config in configurations if config['valid']]
 
 def init_token(configurations):
@@ -34,12 +34,11 @@ def init_token(configurations):
     """
     for config in configurations:
         name = config['name']
-        baseUrl = config['baseUrl']
+        base_url = config['base_url']
         username = config['username']
         password = config['password']
         print(f"获取该配置项的token:{config['name']}：")
-        # config["token"] = get_token(name, baseUrl, username, password)
-        token_data = get_token(name, baseUrl, username, password)
+        token_data = get_token(name, base_url, username, password)
         
         # 处理报错相关字段
         print(token_data)
