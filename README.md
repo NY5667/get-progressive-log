@@ -1,5 +1,7 @@
 # get-progressive-log
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ny5667_get-progressive-log&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ny5667_get-progressive-log)
+
 根据configurations.json去读取对应配置项的服务启动情况
 
 安装虚拟环境包
