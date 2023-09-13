@@ -38,7 +38,7 @@ def init_token(configurations):
         username = config['username']
         password = config['password']
         print(f"获取该配置项的token:{config['name']}：")
-        token_data = get_token(name, base_url, username, password)
+        token_data = get_token(base_url, username, password)
         
         # 处理报错相关字段
         print(token_data)

@@ -1,11 +1,10 @@
 import requests
 
-def get_token(name, base_url, username, password):
+def get_token(base_url, username, password):
     """
     这个函数用于获取token用于接口授权请求。
 
     参数:
-    name     (string): 配置项名称。
     base_url (string): 网站部署地址。
     username (string): 登录的用户名。
     password (string): 登录的密码。
@@ -23,19 +22,18 @@ def get_token(name, base_url, username, password):
     data = response.json()
     return data
 
-def get_pregressive_log(name, baseUrlMs, token):
+def get_pregressive_log(base_url_ms, token):
     """
     这个函数用于获取服务启动状态。
 
     参数:
-    name       (string):         对应配置的名称。
-    baseUrlMs  (string):         平台的msService，是nginx反向代理出来的。
+    base_url_ms  (string):         平台的msService，是nginx反向代理出来的。
     token      (string):         用于调用接口时的授权验证。
 
     返回:
     string: 授权的ticket。
     """
-    url = baseUrlMs + "/servicemanager/msModule/getProgressiveLog"
+    url = base_url_ms + "/servicemanager/msModule/getProgressiveLog"
 
     headers = {"Authorization": f"Bearer {token}"}
     response = requests.post(url, headers=headers)

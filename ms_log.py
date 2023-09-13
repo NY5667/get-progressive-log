@@ -16,7 +16,7 @@ def run_task():
             name = config['name']
             base_url_ms = config['base_url_ms']
             token = config["token"]
-            progressive_log = get_pregressive_log(name, base_url_ms, token)
+            progressive_log = get_pregressive_log(base_url_ms, token)
             
             # 处理报错返回结果
             if 'error' in progressive_log:
