@@ -5,7 +5,7 @@
     "base_url_ms": "{{base_url}}/msService",
     "username": "ldy",
     "password": "Supcon@1304",
-    "valid": true
+    "valid": false
   },
   {
     "name": "10.54.4.34",
@@ -45,6 +45,6 @@
     "base_url_ms": "{{base_url}}/msService",
     "username": "ldy",
     "password": "Asdfjkl@1",
-    "valid": false
+    "valid": true
   }
 ]
